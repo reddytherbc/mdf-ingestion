@@ -1,0 +1,1 @@
+/usr/work/attach-mdf.sh & /opt/mssql/bin/sqlservr
