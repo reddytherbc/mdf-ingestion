@@ -2,6 +2,7 @@
 FROM mcr.microsoft.com/mssql/server:2022-latest
 
 # Create work directory.
+USER root
 RUN mkdir -p /usr/work
 WORKDIR /usr/work
 
