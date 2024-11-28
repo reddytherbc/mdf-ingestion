@@ -9,8 +9,9 @@ WORKDIR /usr/work
 # Copy all scripts into working directory.
 COPY . /usr/work/
 
-# Grant permissions for the attach-mdf.sh script to be executable.
+# Grant permissions for scripts to be executable.
 RUN chmod +x /usr/work/attach-mdf.sh
+RUN chmod +x /usr/work/entrypoint.sh
 
 # Expose port so that commands can be sent to the SQL Server.
 EXPOSE 1433
