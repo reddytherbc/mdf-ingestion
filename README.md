@@ -29,11 +29,13 @@ docker run \
 3. Access the container and check that the MDF has been attached properly
 
 ```sh
-# Access bash interface within the container.
-docker exec -it sqlserver "bash"
-
 # Log in to SQL Server and set target database.
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Password1!" -d AdventureWorks2012
+docker exec -it sqlserver /opt/mssql-tools18/bin/sqlcmd \
+    -S localhost \
+    -U sa \
+    -P Password1! \
+    -d AdventureWorks2012 \
+    -C
 
 # Run SQL from the command line via sqlcmd.
 select * from saleslt.product;
