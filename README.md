@@ -37,7 +37,8 @@ docker exec -it sqlserver /opt/mssql-tools18/bin/sqlcmd \
     -d AdventureWorks2012 \
     -C
 
-# Run SQL from the command line via sqlcmd.
+# Wait 2 minutes for the setup to complete.
+# Run the below SQL from the command line via sqlcmd.
 select * from saleslt.product;
 GO
 ```
